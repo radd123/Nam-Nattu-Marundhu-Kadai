@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Nam Nattumarundhu kadai</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #DAF7A6 !important;
+        }
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #DAF7A6;
+            max-width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: auto;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+
+
+
+        .description {
+            margin-left: 2%;
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #FFC300;
+            color: #581845;
+        }
+
+        .detail-attr-size {
+            margin-left: 28%;
+        }
+
+        .container {
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .table {
+            background-color: inherit;
+            color: #900C3F;
+            font-size: 18px;
+            width: 700px;
+            margin: 23px;
+            height: auto;
+            border: black;
+        }
+
+        .container img {
+            padding-right: 32px;
+        }
+
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+
+        .cart {
+            padding-left: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid>article img {
+            max-width: 100%;
+            height: 355px;
+        }
+
+        .grid .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid .text a {
+            text-decoration: none;
+        }
+
+        .grid .text h2 {
+            font-size: 1.4rem;
+            font-family: 'Fredoka One', cursive;
+            color: whitesmoke;
+
+        }
+
+        .grid .text h4 a {
+            text-decoration: none;
+        }
+
+        .grid .text p {
+            font-size: 0.9rem;
+            color: rgb(119, 111, 111);
+        }
+
+        .grid .text p a {
+            text-decoration: none;
+            font-weight: bold;
+            /* color: #555; */
+            color: blanchedalmond;
+            font-family: 'Courgette', cursive;
+        }
+
+        .breadcrumb {
+            padding-left: 38px;
+        }
+
+        .pagination {
+            left: 50%;
+        }
+
+        .fcontainer {
+            max-width: 1200px;
+            position: relative;
+            width: 100%;
+            background-color: #FFC300;
+        }
+
+        .fcontainer {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-color-info" href="#">Nam Nattumarundhu kadai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <button class="btn btn-seconadary btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login</button>
+                    <button class="btn btn-secondary " btn bg-transparent"" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+                <p>
+                    E-mail: namnattumarundhukadai@gmail.com<br>
+                    Ph: 31245679807<br>
+                    Customer Care No: 1800-6578-9887
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/herbalproducts.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Herbal Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/herbalproducts.html">Herbal
+                                        Powders</a></li>
+                                <li><a class="dropdown-item" href="/rawordriedherbs.html">Raw/Dried
+                                        Herbs</a></li>
+                                <li><a class="dropdown-item" href="/beautyproducts.html">Beauty
+                                        Products</a></li>
+                                <li><a class="dropdown-item" href="/pisinorgum.html">Pisin/Gum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Medicines
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="/chooranam.html">Chooranam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/syrup.html">Syrup</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/lehiyam.html">Lehiyam/Rasayanam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/thailam.html">Thailam/Oil</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pujapackages.html">Puja Packages</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/others.html">Others</a>
+                        </li>
+
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books.html">Books </a>
+                        </li>
+                        <li class="cart">
+                            <a href="#"><img
+                                    src="https://img.icons8.com/emoji/48/000000/shopping-cart-emoji.png"></a>
+                            <!-- <!-- <i class="fa" style="font-size: 43px;">&#xf07a;</i> -->
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- breadcrumb divider starts here -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="/pujapackages.html">Puja Packages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gayathri Homam</li>
+        </ol>
+    </nav>
+    <!-- Pagination starts here
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+
+    <!-- Login Modal starts here-->
+    <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal ends here -->
+
+
+    <!-- Signup Modal starts here-->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby=signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create a new account!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+    <br><br><br>
+    <div class="container">
+        <img src="/Images/gayathrihomam-productcard.jpg" width="355" height="355" align="left">
+        Gayathri Homam<br><br>
+        Rs.11,500/-<br><br>
+        Quick Overview:<br>
+        Gayatri Mantra is the mother of all mantras. The glorious Gayatri (Gayathri Mantra) is an impregnable
+        spiritual armor that protects the worshipper and shows him the brightest light of the greatest spiritual
+        revelation. That is the purpose and power of Gayatri mantra.<br>
+        Weight: Pack
+        <div class="detail-attr-size">
+            <label>Quantity: </label>
+            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <br>
+        <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+        <h3>Package contains:</h3>
+    </div>
+
+    <table class="table table-bordered my-4">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Tamil Name</th>
+                <th scope="col">English Name</th>
+                <th scope="col">Quantity</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>மஞ்சள் பொடி</td>
+                <td>Turmeric Powder</td>
+                <td>100 gm</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>குங்குமம்</td>
+                <td>
+                    Kumkum</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>சந்தனம்</td>
+                <td>
+                    SandalWood Powder</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>பன்னீர்</td>
+                <td>
+                    Rose Water</td>
+                <td>
+                    200ml</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>விபூதி</td>
+                <td>
+                    Ash</td>
+                <td>
+                    125 g</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>பாக்கு</td>
+                <td>
+                    Betel Nuts</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>கற்பூரம்</td>
+                <td>
+                    Camphor</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>சாம்பராணி </td>
+                <td>
+                    Incenses Powder</td>
+                <td>
+                    1 Packet</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>அகர்பதி</td>
+                <td>
+                    Incenses Stick</td>
+                <td>
+                    1 Packet</td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>பச்சரிசி</td>
+                <td>Raw Rice</td>
+                <td>
+                    1 kg</td>
+            </tr>
+            <tr>
+                <th scope="row">12</th>
+                <td>வெல்லம்</td>
+                <td>
+                    Jaggery</td>
+                <td>
+                    250 g</td>
+            </tr>
+            <tr>
+                <th scope="row">14</th>
+                <td>நூல் உருண்டை</td>
+                <td>
+                    Ball of Yarn</td>
+                <td>
+                    1 No</td>
+            </tr>
+            <tr>
+                <th scope="row">15</th>
+                <td>கோதுமை, நெல், துவரை ,உளுந்து கொள்ளு, எள், பச்சை பயிறு, பச்சை பட்டாணி .அவறை</td>
+                <td>Wheat Paddy, Pigeonpea, Black Gram, Horse Gram, Sesame, green gram, Green Peas, Bean</td>
+                <td>Each 200 gms</td>
+            </tr>
+            <tr>
+                <th scope="row">16</th>
+                <td>தேன்</td>
+                <td>
+                    Honey</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">17</th>
+                <td>நெய்</td>
+                <td>
+                    Ghee</td>
+                <td>
+                    500 g</td>
+            </tr>
+            <tr>
+                <th scope="row">18</th>
+                <td>உலர் தேங்காய்</td>
+                <td>Dry Coconut</td>
+                <td>2 nos</td>
+            </tr>
+            <tr>
+                <th scope="row">19</th>
+                <td>முந்திரி</td>
+                <td>
+                    Cashew Nuts</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">20</th>
+                <td>வெட்டிவேர்</td>
+                <td>
+                    Citronella</td>
+                <td>
+                    50 g</td>
+            </tr>
+            <tr>
+                <th scope="row">21</th>
+                <td>உலர் திராட்சை</td>
+                <td>
+                    Dry Grapes</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">22</th>
+                <td>ஏலக்காய்</td>
+                <td>
+                    Cardamom</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">23</th>
+                <td>இலவங்க பட்டை</td>
+                <td>
+                    Cinnamon</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">24</th>
+                <td>ஜாதிக்காய்</td>
+                <td>
+                    Nutmeg</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">25</th>
+                <td>ஜாபத்ரி</td>
+                <td>
+                    Japatri</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">26</th>
+                <td>கஸ்துரி மஞ்சள்</td>
+                <td>
+                    Kasturi manjal</td>
+                <td>
+                    2 Box</td>
+            </tr>
+            <tr>
+                <th scope="row">27</th>
+                <td>கோரோஜனம்</td>
+                <td>Korojanam</td>
+                <td>
+                    2 box</td>
+            </tr>
+            <tr>
+                <th scope="row">28</th>
+                <td>குங்குமப்பூ</td>
+                <td>
+                    Saffron</td>
+                <td>
+                    1 box</td>
+            </tr>
+            <tr>
+                <th scope="row">29</th>
+                <td>பச்சைக் கற்பூரம் .</td>
+                <td>
+                    Menthol Camphor</td>
+                <td>
+                    1 box</td>
+            </tr>
+            <tr>
+                <th scope="row">30</th>
+                <td>பாதாம் பருப்பு</td>
+                <td>
+                    Almond</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">31</th>
+                <td>கற்கண்டு</td>
+                <td>
+                    Sugar candy</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">32</th>
+                <td>வால்மிளகு</td>
+                <td>
+                    Cubeb</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">33</th>
+                <td>வெள்ளை கடுகு</td>
+                <td>
+                    White Mustard</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">34</th>
+                <td>வலம் புரி</td>
+                <td>Valam puri</td>
+                <td>
+                    50 g</td>
+            </tr>
+            <tr>
+                <th scope="row">35</th>
+                <td>இடம் புரி</td>
+                <td>
+                    Itam puri</td>
+                <td>
+                    50 g</td>
+            </tr>
+            <tr>
+                <th scope="row">36</th>
+                <td>கருங்காலி</td>
+                <td>Ebony</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">37</th>
+                <td>ஓம திரவியம்</td>
+                <td>
+                    Ōma tiraviyam</td>
+                <td>
+                    2 packet</td>
+            </tr>
+            <tr>
+                <th scope="row">38</th>
+                <td>அகில் கட்டை</td>
+                <td>Akil kattai</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">39</th>
+                <td>வன்னி</td>
+                <td>
+                    Vanni</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">40</th>
+                <td>செப்பு தகடு</td>
+                <td>Copper plate</td>
+                <td>
+                    1 No</td>
+            </tr>
+            <tr>
+                <th scope="row">41</th>
+                <td>கம்பளி கயறு</td>
+                <td>Woolen Thread</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">42</th>
+                <td>படிகாரம்</td>
+                <td>Padigaram</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">43</th>
+                <td>நெல் பொறி</td>
+                <td>
+                    Paddy</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">44</th>
+                <td>குண்டு மஞ்சள்</td>
+                <td>
+                    Kundu manjal</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">45</th>
+                <td>நல்லெண்ணெய்</td>
+                <td>
+                    Sesame oil</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <th scope="row">46</th>
+                <td>திரிநூல்</td>
+                <td>
+                    Tirinul</td>
+                <td>
+                    2 nos</td>
+            </tr>
+            <tr>
+                <th scope="row">47</th>
+                <td>தீப்பெட்டி .</td>
+                <td>
+                    Match box</td>
+                <td>
+                    1 box</td>
+            </tr>
+            <tr>
+                <th scope="row">48</th>
+                <td>ஸ்பெஷல் சமுத்து கட்டு</td>
+                <td>
+                    Special packs camuttu
+
+                    3</td>
+                <td>3 bundle</td>
+            </tr>
+            <tr>
+                <th scope="row">49</th>
+                <td>சீந்தல் கொடி</td>
+                <td>Seendhal kodi</td>
+                <td>
+                    1 packet</td>
+            </tr>
+            <tr>
+                <th scope="row">50</th>
+                <td>சவுக்கு சுள்ளி</td>
+                <td>
+                    chavukku culli</td>
+                <td>1 bunch
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">51</th>
+                <td>தவிடு</td>
+                <td>
+                    Bran</td>
+                <td>
+                    1 Pack
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">52</th>
+                <td>ரவீகை துண்டு</td>
+                <td>Piece of ravikai</td>
+                <td>
+                    1 No
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">53</th>
+                <td>அங்கவஸ்திரம் (சிவப்பு, நீலம், பச்சை)</td>
+                <td>Ankavastiram</td>
+                <td>
+                    Each 1 Pcs
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card">
+        <div class="description">
+            Gayatri Puja (Gayathri Pooja), Gayatri Homam and Gayatri Yajna
+            <br>
+            <br>
+            <br>
+            Gayatri Mantra is the mother of all mantras. The glorious Gayatri (Gayathri Mantra) is an impregnable
+            spiritual armor that protects the worshipper and shows him the brightest light of the greatest spiritual
+            revelation. That is the purpose and power of Gayatri mantra. In Sanathana Dharma (popularly known as
+            Hinduism, meaning religion found on the other side of river ‘indus’) Supreme impersonal Godhead is the
+            parabrahman, the Matha (mother) is the transcendental consciousness and is the Para Shakthi (power).
+            This Para Shakthi is known as Gayatri and is the very cause of all that was, all that is and everything
+            that will be of existence. When she manifested the trigunas or the three qualities: the sattva (poise,
+            pure), rajas (passion) and tamas (stupor), these three qualities possessing the Supreme consciousness
+            that is parabrahman, manifested into the world as Brahma, Vishnu and Siva. Brahma took over Sattvaguna,
+            Vishnu absorbed Rajoguna and Siva the Tamoguna. Brahma, Vishnu and Siva gained the powers of creation,
+            preservation and destruction through their worship of the Divine Mother Gayatri by chanting Gayatri Maha
+            Mantra. Worship of Gayatri Devi can even confer the powers of the trimurthis. That is the power the
+            Gayatri Mantra, Greatest Mantra of all.
+            <br>
+            <br>
+            <br>
+            In order to blessings of Gayatri Devi, total austerity has to be observed. Just singing the Gayatri
+            Mantra musically, like tuning the Gayatri Mantra lyrics, as is common today will not please Gayatri Devi
+            for sure, In fact it might even displease the Supreme Goddess, as most of the people chanting Gayatri
+            Mantrado not fully understand its value/power and have no regard for its sanctity. Initiation into
+            Gayatri has to be taken from a Guru and practiced regularly by the disciple.
+            <br>
+            <br>
+            <br>
+            In the short version of Gayatri Mantra, Om symbolizes the almighty God, Bhuh means earth, Bhuah
+            represents the entire Universe covering all the semi-gods, demi-gods, their sub-divisions etc including
+            the Sun. Svah represents the third dimension of celestial region called the ‘Swarga-Loka’ and the
+            luminous lokas and parallel Universes which are beyond our present understanding. There are seven
+            vyahritis (rythms) in the Gayatri Mantra. The Meditation should be done on Kundlini, meditation on ‘Om
+            Bhuh’ should be done on Muladhara Chakra (at the base of spine) and ending with ‘Om Tapaha’ at ajna
+            chakra (eyebrow centre). Unless a sadhak is totally able to channel this Kundalini energy in a
+            systematic and proper way, he cannot realize God.
+            <br>
+            <br>
+            <br>
+            Strict spiritual discipline must be observed by the worshipper of the Gayatri. Gayatri Yajna confers all
+            blessedness, strength, radiance, and illumination to the master (yajamana) of the sacrifice. There are
+            many things a person can do with money. Performance of a Gayatri Yajna is one of the best things in Life
+            that you can ever do if you are financially blessed enough to do so. Most of us can have a Gayatri Homa
+            or a Gayatri Puja (Gayathri Pooja) at the least performed at least once in a while. It is our duty to
+            remember and thank the Supreme Goddess to for all the good things she has given to all of us in our
+            Lives. Worship the divine Mother Gayathri Devi in her purest form.
+
+        </div>
+    </div>
+    <!-- footer begins here -->
+    <div class="fcontainer">
+        <div class="newsletter-box bg-image newsletter-box3 radius6">
+
+        </div>
+        <!-- End Newsletter -->
+        <div class="list-footer-box">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 colxs-12">
+                    <div class="footer-box">
+                        <h2 class="title18 title-underline"><span>Contact Us</span></h2>
+                        <p class="desc contact-info-footer">Alternate Medicine store has ventured into online commerce
+                            with an
+                            aspiration to revive our wild crops (Herbs) of our soil. It is a noble attempt to take our
+                            pure and
+                            precious indigenous herbs delivered to your doorstep at ease.
+                            &nbsp;&nbsp;<a href="" style="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End List Footer Box -->
+        <div class="social-payment">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="payment-method text-left" style="margin-top:10px;">
+                        <a href="#" class="wobble-top"><img src="/Images/cirruspayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/mastercardpayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/visapayment.png" alt=""></a>
+                        <!--<a href="#" class="wobble-top"><img src="images/icons/payment4.png" alt=""></a>-->
+                        <a href="#" class="wobble-top"><img src="/Images/americanexpresspayment.png" alt=""></a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="social-footer text-right">
+                        <p class="address_p">
+                            <b>www.nmkonline.com</b><br>
+                            <b>Nam Nattu Marundhu Kadai</b><br>
+                            No 735, abc Junction,<br>
+                            Klphn Road, Coimbatore,<br>
+                            Tamilnadu, India - 641014.<br>
+                            Ph.no: 31245679807<br>
+                            e-mail id: namnattumarundhukadai@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Social Payment -->
+        <div class="copyright-design">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p class="desc text-left copyright">Copyright 2021 <a href="/index.html" style="color:#581845;">Nam
+                            Nattu Marundhu Kadai.</a> All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>

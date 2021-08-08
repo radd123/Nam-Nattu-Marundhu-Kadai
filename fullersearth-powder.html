@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Nam Nattumarundhu kadai</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #DAF7A6 !important;
+        }
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #DAF7A6;
+
+            max-width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: auto;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+
+
+
+        .description {
+            margin-left: 2%;
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #FFC300;
+            color: #581845;
+        }
+
+        .detail-attr-size {
+            margin-left: 28%;
+        }
+
+        .container {
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .table {
+            background-color: inherit;
+            color: #900C3F;
+            font-size: 18px;
+            /* width: 700px; */
+            width: fit-content;
+            margin: 23px;
+            height: auto;
+            border: black;
+        }
+
+        .container img {
+            padding-right: 32px;
+        }
+
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+
+        .cart {
+            padding-left: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid>article img {
+            max-width: 100%;
+            height: 355px;
+        }
+
+        .grid .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid .text a {
+            text-decoration: none;
+        }
+
+        .grid .text h2 {
+            font-size: 1.4rem;
+            font-family: 'Fredoka One', cursive;
+            color: whitesmoke;
+
+        }
+
+        .grid .text h4 a {
+            text-decoration: none;
+        }
+
+        .grid .text p {
+            font-size: 0.9rem;
+            color: rgb(119, 111, 111);
+        }
+
+        .grid .text p a {
+            text-decoration: none;
+            font-weight: bold;
+            /* color: #555; */
+            color: blanchedalmond;
+            font-family: 'Courgette', cursive;
+        }
+
+        .breadcrumb {
+            padding-left: 38px;
+        }
+
+        .pagination {
+            left: 50%;
+        }
+
+        .fcontainer {
+            max-width: 1200px;
+            position: relative;
+            width: 100%;
+            background-color: #FFC300;
+        }
+
+        .fcontainer {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-color-info" href="#">Nam Nattumarundhu kadai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <button class="btn btn-seconadary btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login</button>
+                    <button class="btn btn-secondary " btn bg-transparent"" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+                <p>
+                    E-mail: namnattumarundhukadai@gmail.com<br>
+                    Ph: 31245679807<br>
+                    Customer Care No: 1800-6578-9887
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/herbalproducts.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Herbal Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/herbalproducts.html">Herbal
+                                        Powders</a></li>
+                                <li><a class="dropdown-item" href="/rawordriedherbs.html">Raw/Dried
+                                        Herbs</a></li>
+                                <li><a class="dropdown-item" href="/beautyproducts.html">Beauty
+                                        Products</a></li>
+                                <li><a class="dropdown-item" href="/pisinorgum.html">Pisin/Gum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Medicines
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="/chooranam.html">Chooranam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/syrup.html">Syrup</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/lehiyam.html">Lehiyam/Rasayanam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/thailam.html">Thailam/Oil</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pujapackages.html">Puja Packages</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/others.html">Others</a>
+                        </li>
+
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books.html">Books </a>
+                        </li>
+                        <li class="cart">
+                            <a href="#"><img
+                                    src="https://img.icons8.com/emoji/48/000000/shopping-cart-emoji.png"></a>
+                            <!-- <!-- <i class="fa" style="font-size: 43px;">&#xf07a;</i> -->
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- breadcrumb divider starts here -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="/herbal.html">Herbal Products</a></li>
+            <li class="breadcrumb-item"><a href="/beautyproducts.html">Beauty Products</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Multani Mitti / Fullers Earth Powder</li>
+    </nav>
+    <!-- Pagination starts here
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+
+    <!-- Login Modal starts here-->
+    <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal ends here -->
+
+
+    <!-- Signup Modal starts here-->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby=signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create a new account!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+    <br><br><br>
+    <div class="container">
+        <img src="/Images/fullersearthpowder-productcard.jpg" width="355" height="380" align="left">
+        Multani Mitti / Fullers Earth Powder<br>
+        Brand : Bogar<br>
+        Rs:40/-<br>
+        Quick Overview:
+        <p>Multani mitti, better known as the Fullers earth is a clay substance that is hugely popular for its healing property against acne and blemishes. Fullers Earth Powder is a cosmetic product that helps the skin. Multani Mitti skin cleanses and cleanses. Fullers Earth Powder contains magnesium chloride. It removes pimples and rashes on the skin. Many people use face packs and face masks that contain a large amount of Multani Mitti.</p>
+        Weight: 50 grams
+        <div class="detail-attr-size">
+            <label>Quantity: </label>
+            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+        <br><br><br>
+        <h3>Description:</h3>
+    </div>
+
+
+    <div class="card">
+        <div class="description">
+            <br><br>
+            Botanical Name : Bentonite Clay<br>
+            English Name : Fullers Earth<br>
+            Tamil Name : முல்தானிமட்டி / Moolthan Mitti<br>
+            Hindi Name : मुल्तानी मुद / Multani Mud<br>
+            Malayalam Name: മുൾട്ടാണി മിട്ടി / Multani Mitti<br>
+            Telugu Name : ముల్తానీ మడ్ / Multani Mud<br>
+
+
+            <br>
+            Multani mitti, better known as the Fullers earth is a clay substance that is hugely popular for its healing
+            property against acne and blemishes. Fullers Earth Powder is a cosmetic product that helps the skin. Multani
+            Mitti skin cleanses and cleanses. Fullers Earth Powder contains magnesium chloride. It removes pimples and
+            rashes on the skin. Many people use face packs and face masks that contain a large amount of Multani Mitti.
+            <br><br>
+            Multani Mitti is applied directly to the face of the silk like flour. It is suitable for all types of skin.
+            This results in no adverse reactions.It adds to the color and beauty of the skin. Fullers Earth Powder is a
+            very affordable cosmetics product nowadays. Although Multani Metti is cheaper, the benefits that can be
+            achieved are numerous. Get Natural Multani Mitti Online at Nattumaruthuukadai. Although . Fullers Earth
+            Powder is cheaper, the benefits that can be achieved are numerous
+            <br><br>
+
+            About Multani Mitti (Fullers Earth):-
+            <br><br>
+            Multani mitti, better known as the Fullers earth is a clay substance that is hugely popular for its healing
+            property against acne and blemishes. It is very rich in magnesium chloride which helps to reduce acne.
+            Originally used as an absorbent in the wool industry this ingredient is now greatly used in many skin care
+            products.
+            <br><br>
+
+            Multani Matti is a cleanser
+            <br><br>
+            Multani Matti contains a large amount of magnesium chloride. Magnesium chloride can remove acne and skin
+            rashes. Multanimatti is an excellent cleanser.It is able to remove contaminants and bacteria in the skin's
+            cavities. Eliminating factors that cause pimples on the face will prevent new pimples.Multani Mitti is
+            suitable for all types of skin. It is also a cleanser with no adverse reactions.
+            <br><br>
+
+
+
+            Multani matti for Skin:
+            <br><br>
+            Multani Mitti helps to enhance the color and tone of the skin. But this can only be caused by the continued
+            use of Multani Mitti
+            <br><br>
+
+
+
+            Multani Mitti for hair:
+            <br><br>
+            Multani Mitty's hydrating and cleansing benefits are for the scalp and hair. It promises to brighten the
+            hair and give it a healthy scalp.
+
+            <br><br>
+
+
+            Multani Mitti for Dandruff:
+            <br><br>
+            As a hydrating agent, Multani Mitti helps moisturize your scalp and reduces dryness and unevenness.
+
+            With the anti-bacterial and hydrating properties of Multani mitti regularly is effective in reducing and
+            preventing dandruff.It brings in more antibody cells to improve the growth of skin mushrooms in your scalp
+            and improves blood flow. Multani mitti scalp absorbs all the oil that is in addition to it, giving it the
+            hydration and nutrition it needs.Reduces the burden of bacteria on your scalp and makes you feel light.
+            <br><br>
+
+
+            Multani mitti for Dry scalp:
+            <br><br>
+            Dry and uneven scalp is a natural skin condition for some people. Factors such as pollution and climate can
+            worsen this. These factors may also play a role in scalp dryness. In addition, some shampoos have been
+            linked to dryness. From time to time, Multani Miti has been in the making of Hair Care Products. The
+            hydrating nature of Fullers Earth Powder helps moisturize your scalp and hair. It also ensures that your
+            scalp gets enough blood flow.So it will get extra nutrients and regain the natural glow. If you like
+            straight hair, you can create a hair pack with Multani mitti, yoghurt, white egg and some drop lemon
+            juice.If you do not like eggs, you can use honey and flour instead.
+            <br><br>
+
+            Internal Benefits of Multani Mitti (Fullers Earth):-
+            <br><br>
+            NA
+            <br><br>
+
+            External Benefits of Multani Mitti (Fullers Earth):-
+            <br><br>
+
+            1. Multani Mitti for Oily skin: Fuller’s earth works wonders for oily skin. Oily skin easily attracts dust
+            and other impurities from surrounding. These particles clog the skin pores and may cause pimples and
+            eruptions on face. Fullers Earth Powder is a blessing for such individuals. It absorbs excess oil from the
+            skin surface and makes it soft and smooth. It avoids the occurrence of pimples caused due to excess oil
+            secretion.<br>
+
+            2. Multani Mitti for dry skin:Those who have dry to normal skin can use fuller’s earth face packs by adding
+            some milk and almond paste. Dry skins needs extra care.<br>
+
+            3. Multani Mitti for Scrubbing: When in hurry, and no time for applying a face pack and waiting, you can use
+            fuller’s earth for scrubbing purpose. It will give equally glowing skin. To make this scrub use roughly
+            grounded almonds or walnuts. if you do not wish to use these nuts, you can use some sugar granules with
+            Fuller’s earth and scrub your face softly with this mix. Wash it off and you will see a clean, glowing skin
+            in minutes.<br>
+
+            4. Multani Mitti for cleaning:Multani Mitti is a very good cleanser. It cleanses on the surface as well as
+            deeper action. It removes all the dead cells and cleanses the pores from impurities.<br>
+
+            5.Multani Mitti for Toning: It helps in improving the skin tone and gives a bright glow and radiance on the
+            face. Multani mitti’s bleaching effect helps in lightening the blemishes and acne marks too.<br>
+
+            6. Multani mitti for blemishes and pimple/ Acne marks: Multani mitti can be used for removing pimple marks
+            and blemishes to have an even tone. To make an anti blemish and anti mark pack, mix Multani mitti with
+            tomato juice or lemon juice and add a pinch of turmeric to it.<br>
+
+            7. Multani Mitti for Acne and pimples: Pimple and acne problems can be relieved by applying Fullers Earth
+            Powder and Neem leaves paste on face. You can keep it for some time and then wash it off. If you have scars,
+            you can add lemon juice to this paste. Applying it for a week will have noticeable effects on your face.<br>
+
+            8. Multani mitti for pigmentation: Multani mitti has anti tan properties and helps in getting rid of sun tan
+            and ill effects of pollution on your skin.<br>
+
+            9. Multani mitti for skin irritation:If you have skin irritation due to acidity, allergic reaction to any
+            cosmetic product or bleach, or red skin due to excess sun exposure, Multani mitti has cooling effect and
+            will give you instant relief from skin irritation.<br>
+
+            10. Multani Mitti as Body Wash:Multani mitti can be used in your natural body wash.<br>
+
+            <br>
+            How to Consume Multani Mitti (Fullers Earth) Internally:-
+            <br><br>
+            NA
+            <br><br>
+
+            How to Apply Multani Mitti (Fullers Earth) Externally:-
+            <br><br>
+
+
+
+            Please refer External Benefits above . Applying it for a week will have noticeable effects on your face.
+        </div>
+    </div>
+
+    <!-- footer begins here -->
+    <div class="fcontainer">
+        <div class="newsletter-box bg-image newsletter-box3 radius6">
+
+        </div>
+        <!-- End Newsletter -->
+        <div class="list-footer-box">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 colxs-12">
+                    <div class="footer-box">
+                        <h2 class="title18 title-underline"><span>Contact Us</span></h2>
+                        <p class="desc contact-info-footer">Alternate Medicine store has ventured into online commerce
+                            with an
+                            aspiration to revive our wild crops (Herbs) of our soil. It is a noble attempt to take our
+                            pure and
+                            precious indigenous herbs delivered to your doorstep at ease.
+                            &nbsp;&nbsp;<a href="" style="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End List Footer Box -->
+        <div class="social-payment">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="payment-method text-left" style="margin-top:10px;">
+                        <a href="#" class="wobble-top"><img src="/Images/cirruspayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/mastercardpayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/visapayment.png" alt=""></a>
+                        <!--<a href="#" class="wobble-top"><img src="images/icons/payment4.png" alt=""></a>-->
+                        <a href="#" class="wobble-top"><img src="/Images/americanexpresspayment.png" alt=""></a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="social-footer text-right">
+                        <p class="address_p">
+                            <b>www.nmkonline.com</b><br>
+                            <b>Nam Nattu Marundhu Kadai</b><br>
+                            No 735, abc Junction,<br>
+                            Klphn Road, Coimbatore,<br>
+                            Tamilnadu, India - 641014.<br>
+                            Ph.no: 31245679807<br>
+                            e-mail id: namnattumarundhukadai@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Social Payment -->
+        <div class="copyright-design">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p class="desc text-left copyright">Copyright 2021 <a href="/index.html" style="color:#581845;">Nam
+                            Nattu Marundhu Kadai.</a> All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+</body>

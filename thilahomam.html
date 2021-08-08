@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Nam Nattumarundhu kadai</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #DAF7A6 !important;
+        }
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #DAF7A6;
+            max-width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: auto;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+
+
+
+        .description {
+            margin-left: 2%;
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #FFC300;
+            color: #581845;
+        }
+
+        .detail-attr-size {
+            margin-left: 28%;
+        }
+
+        .container {
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .table {
+            background-color: inherit;
+            color: #900C3F;
+            font-size: 18px;
+            width: 700px;
+            margin: 23px;
+            height: auto;
+            border: black;
+        }
+
+        .container img {
+            padding-right: 32px;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+
+        .cart {
+            padding-left: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid>article img {
+            max-width: 100%;
+            height: 355px;
+        }
+
+        .grid .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid .text a {
+            text-decoration: none;
+        }
+
+        .grid .text h2 {
+            font-size: 1.4rem;
+            font-family: 'Fredoka One', cursive;
+            color: whitesmoke;
+
+        }
+
+        .grid .text h4 a {
+            text-decoration: none;
+        }
+
+        .grid .text p {
+            font-size: 0.9rem;
+            color: rgb(119, 111, 111);
+        }
+
+        .grid .text p a {
+            text-decoration: none;
+            font-weight: bold;
+            /* color: #555; */
+            color: blanchedalmond;
+            font-family: 'Courgette', cursive;
+        }
+
+        .breadcrumb {
+            padding-left: 38px;
+        }
+
+        .pagination {
+            left: 50%;
+        }
+
+        .fcontainer {
+            max-width: 1200px;
+            position: relative;
+            width: 100%;
+            background-color: #FFC300;
+        }
+
+        .fcontainer {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-gradient">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-color-info" href="#">Nam Nattumarundhu kadai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <button class="btn btn-seconadary btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login</button>
+                    <button class="btn btn-secondary " btn bg-transparent" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+                <p>
+                    E-mail: namnattumarundhukadai@gmail.com<br>
+                    Ph: 31245679807<br>
+                    Customer Care No: 1800-6578-9887
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="\about.html"></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/herbalproducts.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Herbal Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/herbalproducts.html">Herbal
+                                        Powders</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.brwnpaperbag.com/2021/05/01/embroidery-stitches-youtube/">Raw/Dried
+                                        Herbs</a></li>
+                                <li><a class="dropdown-item" href="/beautyproducts.html">Beauty
+                                        Products</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.caabcrochet.com/best-youtube-channels-for-learning-crochet/">Pisin/Gum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Medicines
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item"
+                                        href="https://www.brwnpaperbag.com/2021/05/01/embroidery-stitches-youtube/">Chooranam</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.caabcrochet.com/best-youtube-channels-for-learning-crochet/">Syrup</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://hellosewing.com/top-sewing-youtube-channels/">Tablets</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.brwnpaperbag.com/2021/05/01/embroidery-stitches-youtube/">Lehiyam</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.caabcrochet.com/best-youtube-channels-for-learning-crochet/">Thailam/Oil</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pujapackages.html">Puja Packages</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item"
+                                        href="https://hellosewing.com/top-sewing-youtube-channels/">Cleaning Items</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.brwnpaperbag.com/2021/05/01/embroidery-stitches-youtube/">Rangoli
+                                        Powders</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.caabcrochet.com/best-youtube-channels-for-learning-crochet/">Saradugal</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.brwnpaperbag.com/2021/05/01/embroidery-stitches-youtube/">Ornaments</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.caabcrochet.com/best-youtube-channels-for-learning-crochet/">Decors</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books.html">Books </a>
+                        </li>
+                        <li class="cart">
+                            <a href="#"><img
+                                    src="https://img.icons8.com/emoji/48/000000/shopping-cart-emoji.png"></a>
+                            <!-- <!-- <i class="fa" style="font-size: 43px;">&#xf07a;</i> -->
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- breadcrumb divider starts here -->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/pujapackages.html">Puja Packages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thila Homam</li>
+            </ol>
+        </nav>
+        <!-- Pagination starts here
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+
+        <!-- Login Modal starts here-->
+        <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- login modal ends here -->
+
+
+        <!-- Signup Modal starts here-->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby=signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signupModalLabel">Create a new account!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create a new account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signup modal ends here -->
+        <br><br><br>
+        <div class="container">
+            <img src="/Images/bhagavathysevahomam-productcard.jpg" width="355" height="355" align="left">
+            Thila Homam<br><br>
+            Rs.3,500/-<br><br>
+            Quick Overview:<br>
+            Thila homam is mainly performed as a remedy by any person suffering from Pitru Dosha in their horoscope.
+            Performing this homam in Rameswaram is considered very auspicious and powerful.
+            <br>
+            Weight: Pack
+            <div class="detail-attr-size">
+                <label>Quantity: </label>
+                <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <br>
+            <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+            <h3>Package contains:</h3>
+        </div>
+
+        <table class="table table-bordered my-4">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Tamil Name</th>
+                    <th scope="col">English Name</th>
+                    <th scope="col">Quantity</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>மஞ்சள் பொடி </td>
+                    <td>
+                        Turmeric Powder
+                    </td>
+                    <td>
+                        100 g
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>குங்குமம் </td>
+                    <td>
+
+                        Kumkum
+                    </td>
+                    <td>
+                        100 g
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td> அகர்பதி</td>
+                    <td>
+
+                        Incenses Stick
+                    </td>
+                    <td>
+
+                        1 Packet
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>பச்சரிசி</td>
+                    <td>rice (raw)</td>
+                    <td>1 kg</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>கற்பூரம்</td>
+                    <td>
+                        Camphor
+                    </td>
+                    <td>
+
+                        100 g
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>பாக்கு</td>
+                    <td>Betel Nut
+
+                    </td>
+                    <td>
+                        100 g
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>சந்தனம்</td>
+                    <td>
+                        SandalWood Powder
+                    </td>
+                    <td>
+
+                        100 g
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>உலர் தேங்காய்</td>
+                    <td>
+                        Dry Coconut
+                    </td>
+                    <td>
+
+                        1
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>நெய்</td>
+                    <td>
+
+                        Ghee
+                    </td>
+                    <td>
+                        500 g
+
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>சாம்பராணி </td>
+                    <td>
+
+                        Incenses Powder
+
+
+                    </td>
+                    <td>
+
+                        1 Packet
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <td>நெல்</td>
+                    <td>
+
+                        Paddy
+
+                    </td>
+                    <td>
+
+
+                        1 kg
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td>நெல் பொறி</td>
+                    <td>
+
+
+                        Paddy
+
+
+                    </td>
+                    <td>
+
+                        100 g
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <td>வெண்ணை</td>
+                    <td>
+                        butter
+                    </td>
+                    <td>
+
+
+                        100 g
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">14</th>
+                    <td>சிகப்பு செந்துரம் </td>
+                    <td>Fair Senthuram</td>
+                    <td>
+                        100 g
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">15</th>
+                    <td>வெல்லம்</td>
+                    <td>
+                        Jaggery
+                    </td>
+                    <td>
+                        250 g</td>
+                </tr>
+                <tr>
+                    <th scope="row">16</th>
+                    <td>ரோஜா மொக்கு</td>
+                    <td>
+                        Rose Bud</td>
+                    <td>
+                        100 g</td>
+                </tr>
+                <tr>
+                    <th scope="row">17</th>
+                    <td>நவதானியம்</td>
+                    <td>
+                        9 Grains</td>
+                    <td>
+                        100 g
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+
+            </tbody>
+        </table>
+        <div class="card">
+            <div class="description">
+                Thila Homam:
+                <br><br>
+
+
+
+                Harivara organizes the entire homam as per the devotee’s requirement including swamy darshan in
+                Rameswaram to performing Visarjanam in Danushkodi along with the homam. We can also arrange for Food &
+                Accommodation arrangements.
+                <br><br>
+                This Homa is performed by people having:
+                <br><br>
+
+                <ul>
+                    <li>Pitru Dosha in their Horoscopes</li>
+                    <li>Untimely/ Sudden Death or Accident of immediate Family members</li>
+                    <li>Not performing Pitru(ancestral) rituals/ Srardha / Tarpana Regularly</li>
+                    <li>Facing Various Problems related to Marriage/ Job / Child Birth / Finances /Fights /Court & Cases
+                    </li>
+                    <li>Experiencing Paranormal / Negative / Evil Occurrences in life</li>
+                </ul>
+                <br><br>
+
+
+
+
+            </div>
+        </div>
+        <!-- footer begins here -->
+        <div class="fcontainer">
+            <div class="newsletter-box bg-image newsletter-box3 radius6">
+
+            </div>
+            <!-- End Newsletter -->
+            <div class="list-footer-box">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 colxs-12">
+                        <div class="footer-box">
+                            <h2 class="title18 title-underline"><span>Contact Us</span></h2>
+                            <p class="desc contact-info-footer">Alternate Medicine store has ventured into online
+                                commerce with an
+                                aspiration to revive our wild crops (Herbs) of our soil. It is a noble attempt to take
+                                our pure and
+                                precious indigenous herbs delivered to your doorstep at ease.
+                                &nbsp;&nbsp;<a href="" style="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End List Footer Box -->
+            <div class="social-payment">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="payment-method text-left" style="margin-top:10px;">
+                            <a href="#" class="wobble-top"><img src="/Images/cirruspayment.png" alt=""></a>
+                            <a href="#" class="wobble-top"><img src="/Images/mastercardpayment.png" alt=""></a>
+                            <a href="#" class="wobble-top"><img src="/Images/visapayment.png" alt=""></a>
+                            <!--<a href="#" class="wobble-top"><img src="images/icons/payment4.png" alt=""></a>-->
+                            <a href="#" class="wobble-top"><img src="/Images/americanexpresspayment.png" alt=""></a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="social-footer text-right">
+                            <p class="address_p">
+                                <b>www.nmkonline.com</b><br>
+                                <b>Nam Nattu Marundhu Kadai</b><br>
+                                No 735, abc Junction,<br>
+                                Klphn Road, Coimbatore,<br>
+                                Tamilnadu, India - 641014.<br>
+                                Ph.no: 31245679807<br>
+                                e-mail id: namnattumarundhukadai@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Social Payment -->
+            <div class="copyright-design">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <p class="desc text-left copyright">Copyright 2021 <a href="/index.html"
+                                style="color:#581845;">Nam Nattu Marundhu Kadai.</a> All Rights Reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+            crossorigin="anonymous"></script>
+</body>

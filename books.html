@@ -1,0 +1,1699 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Nam Nattumarundhu kadai</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #DAF7A6 !important;
+        }
+
+        .description {
+            margin-left: 2%;
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .topnav {
+            background-color: #FFC300;
+            color: #581845;
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        .detail-attr-size {
+            margin-left: 28%;
+        }
+
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+
+        .cart {
+            padding-left: 28px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid>article img {
+            max-width: 100%;
+            height: 355px;
+        }
+
+        .grid .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid .text h2 {
+            padding: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        .grid .text a {
+            text-decoration: none;
+        }
+
+        .grid .text h4 {
+            font-size: 1.4rem;
+            font-family: 'Fredoka One', cursive;
+
+        }
+
+        .grid .text h4 a {
+            text-decoration: none;
+        }
+
+        .grid .text p {
+            font-size: 0.9rem;
+            color: #900c37;
+            font-weight: bolder;
+        }
+
+        .grid .text p a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #555;
+            font-family: 'Courgette', cursive;
+        }
+
+        .breadcrumb {
+            padding-left: 38px;
+        }
+
+        .pagination {
+            left: 50%;
+        }
+         .detail-attr-size {
+            font-weight: bolder;
+            padding-right: 25%;
+        } 
+        
+        .fcontainer {
+            max-width: 1200px;
+            position: relative;
+            width: 100%;
+            background-color: #FFC300;
+        }
+
+        .fcontainer {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-color-info" href="#">Nam Nattumarundhu kadai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <!-- <button type="submit"> -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </button> -->
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <button class="btn btn-seconadary btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login</button>
+                    <button class="btn btn-secondary " btn bg-transparent"" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+                <p>
+                    E-mail: namnattumarundhukadai@gmail.com<br>
+                    Ph: 31245679807<br>
+                    Customer Care No: 1800-6578-9887
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/herbalproducts.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Herbal Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/herbalproducts.html">Herbal
+                                        Powders</a></li>
+                                <li><a class="dropdown-item" href="/rawordriedherbs.html">Raw/Dried
+                                        Herbs</a></li>
+                                <li><a class="dropdown-item" href="/beautyproducts.html">Beauty
+                                        Products</a></li>
+                                <li><a class="dropdown-item" href="/pisinorgum.html">Pisin/Gum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Medicines
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="/chooranam.html">Chooranam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/syrup.html">Syrup</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/lehiyam.html">Lehiyam/Rasayanam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/thailam.html">Thailam/Oil</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pujapackages.html">Puja Packages</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/others.html">Others</a>
+                        </li>
+
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books.html">Books </a>
+                        </li>
+                        <li class="cart">
+                            <a href="#"><img
+                                    src="https://img.icons8.com/emoji/48/000000/shopping-cart-emoji.png"></a>
+                            <!-- <!-- <i class="fa" style="font-size: 43px;">&#xf07a;</i> -->
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- breadcrumb divider starts here -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Books</li>
+        </ol>
+    </nav>
+    <!-- Pagination starts here
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <!-- Login Modal starts here-->
+    <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal ends here -->
+
+
+    <!-- Signup Modal starts here-->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby=signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create a new account!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+
+
+    <!-- product cards starts here -->
+    <div class="container">
+        <main class="grid">
+            <article>
+                <img src="/Images/vinayakaragavalkavacham-productcard.jpg" alt="Vinayakar Agaval Kavacham photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Vinayakar Agaval Kavacham-Tamil</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179500255<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 31<br>
+                        Length:Width:Depth(Inches)=8:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/kamakshisuprapadham-productcard.jpg" alt="Kamakshi Suprapadham photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Shri Kamakshi Suprapadham-Tamil</h4>
+                    </a>
+                    <h2>Rs.8/-</h2>
+                    <p>
+                        ISBN: 9788179500361<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth(Inches)=8:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+
+                </div>
+            </article>
+            <article>
+                <img src="/Images/shrikashirameshwarasuprabhatam-productcard.jpg"
+                    alt="Shri Kashi Rameshwara Suprabhatam<photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Shri Kashi Rameshwara Suprabhatam-Tamil</h4>
+                    </a>
+                    <h2>Rs.8/-</h2>
+                    </p>
+                    <p>
+                        ISBN: 9788179500026<br>
+                        Publisher: GIRI<br>
+                        Language: Sanskrit<br>
+                        Pages: 30<br>
+                        Length: Width:Depth (Inches)= 2:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/hanumaanchalisa-hindi-productcard.jpg" alt="Hanumaan Chalisa - Hindi photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Hanumaan Chalisa - Hindi</h4>
+                    </a>
+                    <h2>Rs.8/-</h2>
+                    <p>
+                        ISBN: 9788179504642<br>
+                        Publisher: GIRI<br>
+                        Language: Hindi<br>
+                        Pages: 63<br>
+                        Length:Width:Depth (Inches)=3.5:2.5:0.5<br>
+                        Net Weight: (KG) 0.015<br>
+                        Binding: Soft Bound<<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/shriraghavendrastrotram-productcard.jpg" alt="Shri Raghavendrar Stotram photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Shri Raghavendrar Stotram-Hindi</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179500927<br>
+                        Publisher: GIRI<br>
+                        Language: Sanskrit - Tamil<br>
+                        Pages: 64<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/shrikandasastikavasam-productcard.jpg" alt="Kandar Shashti Kavacham - Murugan photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Shri Kandar Shashti Kavacham - Murugan-Tamil</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179500651<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 63<br>
+                        Length:Width:Depth (Inches)=8:2,5:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/ashtotrasathanamavaliogalurai-productcard.jpg" width="355"
+                    alt="Ashtothra Satha Namavaligal - Vilakka Urai - Tamil photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Ashtothra Satha Namavaligal - Vilakka Urai - Tamil</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179503737<br>
+                        Author: M K Venkataraman<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 48<br>
+                        Length:Width:Depth (Inches)=7:5:1<br>
+                        Net Weight (KG): 0.03<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/shrisudarshanastrotram-productcard.jpg" alt="Sri Sudarshana Stotram photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Sri Sudarshana Stotram-Hindi</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179504062<br>
+                        Publisher: GIRI<br>
+                        Language: Sanskrit<br>
+                        Pages: 31<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/ashtalakshmipuja-productcards.jpg" width="355" alt="Ashta Lakshmi Puja photo">
+                <div class="text">
+                    <a href="#">
+                        <h4>Ashta Lakshmi Puja</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179500149<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 31<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/vellivratamahimai-productcard.jpg" alt="Velli Vrata Mahimai-Tamil photo">
+                <div class="text">
+                    <a href="/cart.html">
+                        <h4>Velli Vrata Mahimai-Tamil</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    <p>
+                        ISBN: 9788179500712<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 30<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.065<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/anandathiruvandadi-productcard.jpg" alt="Ananda Tiruvandadi-Tamil photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Ananda Tiruvandadi-Tamil</h4>
+                    </a>
+                    <h2>Rs.12/-</h2>
+                    <p>
+                        ISBN: 9788179505311<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=7:5:1<br>
+                        Net Weight (KG): 0.03<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srivaibhavalakshmipoojai-productcards.jpg" alt="Sri Vaibhava Lakshmi Poojai photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Vaibhava Lakshmi Poojai-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500774<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 48<br>
+                        Length:Width:Depth (Inches) 8:5:1<br>
+                        Net Weight (KG): 0.045<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/ganapatinityaparayanam-productcard.jpg" alt="Ganapati Nitya Parayanam photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Ganapati Nitya Parayanam</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179501306<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 60<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srisainathapoojai-productcard.jpg" alt="Sri Sainatha Poojai photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Sainatha Poojai-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN : 9788179505038<br>
+                        Publisher : GIRI<br>
+                        Language : Tamil<br>
+                        Pages : 48<br>
+                        Length:Width:Depth(Inches)=7:5:1<br>
+                        Net Weight (KG) : 0.04<br>
+                        Binding : Soft Bound<br>
+                        Availability: In-stock
+                    </p>
+                    <div class="detail-attr-size">
+                        <label>Quantity: </label>
+                        <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+
+                </div>
+            </article>
+            <article>
+                <img src="/Images/velmaralmahamantram-productcard.jpg" alt="Vel Maral Maha Mantram photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Vel Maral Maha Mantram-Tamil
+                        </h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179507193<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 40<br>
+                        Length:Width:Depth(Inches)=3.5:4.5:0.1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+
+            <article>
+                <img src="/Images/venkateshasuprabhatam-productcard.jpg" alt="Venkatesha Suprabhatam photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Venkatesha Suprabhatam-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500309<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 63<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/gayathriramayanam-productcard.jpg" alt="Gayatri Ramayanam-Tamil photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Gayatri Ramayanam-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    </p>
+                    <p>ISBN: 9788179500842<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 31<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/tirumurugatruppadai-productcard.jpg" alt="Tirumurugatruppadai photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Tirumurugatruppadai-Tamil</h4>
+                    </a>
+                    <h2>Rs.10/-</h2>
+                    </p>
+                    <p>
+                        ISBN: 9788179500620<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding :Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/bhuvaneshwarikavacham-productcard.jpg" alt="Bhuvaneshwari Kavacham photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Bhuvaneshwari Kavacham-Tamil </h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179501092<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/mahishasuramardhinistrotramkanakadharastrotram-productcard.jpg" alt="Mahishasuramardini Stotram Kanakadhara Stotram
+                    photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Mahishasuramardini Stotram Kanakadhara Stotram-Tamil
+                        </h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>ISBN: 9788179502563<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 64<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srilalithasahasranamastrotam-productcard.jpg"
+                    alt="Sri Lalita Sahasranama Stotram photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Lalita Sahasranama Stotram-Sanskrit</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179503812<br>
+                        Publisher: GIRI<br>
+                        Language: Sanskrit<br>
+                        Pages: 80<br>
+                        Length:Width:Depth (Inches)=8.5:5.5:1<br>
+                        Net Weight (KG): 0.085<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/navagrahastrotram-productcard.jpg" width="355" alt="Navagraha Stotram photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Navagraha Stotram-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500064<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 29<br>
+                        Length:Width:Depth (Inches)=2:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/sriramarakshastrotram-productcard.jpg"
+                    alt="Sri Ramaraksha Stotram & Bheemaroopi Hanuman Stotram photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Ramaraksha Stotram & Bheemaroopi Hanuman Stotram-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179503775<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 80<br>
+                        Length:Width:Depth (Inches)=8.5:5.5:1<br>
+                        Net Weight (KG): 0.085<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/abiramiandhadi-productcard.jpg" alt="Abirami Andhadi photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Abirami Andhadi</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500132<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 63<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/kandhagurukavacham-productcard.jpg" alt="Kanda Guru Kavacham photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Kanda Guru Kavacham-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500613<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 64<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/shanmugakavasam-productcard.jpg" width="355" alt="Shanmukha Kavacham photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Shanmukha Kavacham-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500217<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 31<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/meenakshistotramala-productcard.jpg" alt="Meenakshi Stotramala photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Meenakshi Stotramala-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179501153<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 63<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srivishnusahasranamam-productcard.jpg" alt="Sri Vishnu Sahasranamam - Tamil photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Vishnu Sahasranamam-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179501061<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 128<br>
+                        Length:Width:Depth (Inches)=4:3:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/kandarkalivenpa-productcard.jpg" width="355" alt="Kandar Kalivenpa photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Kandar Kalivenpa-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500606<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 30<br>
+                        Length:Width:Depth (Inches)=5:4:1<br>
+                        Net Weight (KG): 0.015<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/saraswatiandadi-productcard.jpg" alt="Saraswati Andadi photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Saraswati Andadi-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500972<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=8:4:1<br>
+                        Net Weight (KG): 0.095<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/geethagovindham-productcard.jpg" alt="Geeta Govindam photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Geeta Govindam-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179500880<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 47<br>
+                        Length:Width:Depth (Inches)=7:5:1<br>
+                        Net Weight (KG): 0.41<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srilakshmihayagreevastrotramala-productcard.jpg"
+                    alt="Sri Lakshmi Hayagreeva Stotramala photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Lakshmi Hayagreeva Stotramala-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179501627<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=8:5:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/bhajagovindham-productcard.jpg" alt="Bhaja Govindam photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Bhaja Govindam-Tamil</h4>
+                    </a>
+                    <h2>Rs.15/-</h2>
+                    <p>
+                        ISBN: 9788179502679<br>
+                        Author: Agneshwar<br>
+                        Publisher: GIRI<br>
+                        Language: Sanskrit - Tamil<br>
+                        Pages: 32<br>
+                        Length:Width:Depth (Inches)=7:5:1<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding :Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/vaishnavasandhyavandhanam-productcard.jpg" width="355"
+                    alt="Vaishnava Sandhyavandanam photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Vaishnava Sandhyavandanam-Tamil</h4>
+                    </a>
+                    <h2>Rs.35/-</h2>
+                    <p>
+                        ISBN: 9788179504819<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 80<br>
+                        Length:Width:Depth (Inches)=9:6:1<br>
+                        Net Weight (KG): 0.055<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/yajurvedaapastambatrikalasandhyavandanam-productcard.jpg" width="355"
+                    alt="Yajurveda Apastamba) Trikala Sandhyavandanam-Tamil photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Yajurveda(Apastamba) Trikala Sandhyavandanam-Tamil</h4>
+                    </a>
+                    <h2>Rs.60/-</h2>
+                    <p>
+                        ISBN: 9788179504512<br>
+                        Author: Meenakshi Balu<br>
+                        Publisher: GIRI<br>
+                        Language: Tamil<br>
+                        Pages: 64<br>
+                        Length:Width:Depth (Inches)=10:7:1<br>
+                        Net Weight (KG): 0.095<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+            <article>
+                <img src="/Images/srividhyasandhyavandhanam-productcard.jpg" width="355"
+                    alt="Sri Vidhya Sandhyavandhanam-Tamil photo">
+                <div class="text">
+                    <a href="">
+                        <h4>Sri Vidhya Sandhyavandhanam-Tamil</h4>
+                    </a>
+                    <h2>Rs.30/-</h2>
+                    <p>
+                        Publisher: Shree Gnana Prakashan<br>
+                        Language: Sanskrit<br>
+                        Pages: 24<br>
+                        Length:Width:Depth (Inches)=8.5:5.5:0.5<br>
+                        Net Weight (KG): 0.025<br>
+                        Binding: Soft Bound<br>
+                        Availability: In-stock</p>
+                        <div class="detail-attr-size">
+                            <label>Quantity: </label>
+                            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div><br>
+                    <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+
+
+    <!-- footer begins here -->
+    <div class="fcontainer">
+        <div class="newsletter-box bg-image newsletter-box3 radius6">
+
+        </div>
+        <!-- End Newsletter -->
+        <div class="list-footer-box">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 colxs-12">
+                    <div class="footer-box">
+                        <h2 class="title18 title-underline"><span>Contact Us</span></h2>
+                        <p class="desc contact-info-footer">Alternate Medicine store has ventured into online commerce
+                            with an
+                            aspiration to revive our wild crops (Herbs) of our soil. It is a noble attempt to take our
+                            pure and
+                            precious indigenous herbs delivered to your doorstep at ease.
+                            &nbsp;&nbsp;<a href="" style="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End List Footer Box -->
+        <div class="social-payment">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="payment-method text-left" style="margin-top:10px;">
+                        <a href="#" class="wobble-top"><img src="/Images/cirruspayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/mastercardpayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/visapayment.png" alt=""></a>
+                        <!--<a href="#" class="wobble-top"><img src="images/icons/payment4.png" alt=""></a>-->
+                        <a href="#" class="wobble-top"><img src="/Images/americanexpresspayment.png" alt=""></a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="social-footer text-right">
+                        <p class="address_p">
+                            <b>www.nmkonline.com</b><br>
+                            <b>Nam Nattu Marundhu Kadai</b><br>
+                            No 735, abc Junction,<br>
+                            Klphn Road, Coimbatore,<br>
+                            Tamilnadu, India - 641014.<br>
+                            Ph.no: 31245679807<br>
+                            e-mail id: namnattumarundhukadai@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Social Payment -->
+        <div class="copyright-design">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p class="desc text-left copyright">Copyright 2021 <a href="/index.html" style="color:#581845;">Nam
+                            Nattu Marundhu Kadai.</a> All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>

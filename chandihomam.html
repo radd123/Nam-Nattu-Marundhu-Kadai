@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Nam Nattumarundhu kadai</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #DAF7A6 !important;
+        }
+
+        .description {
+            margin-left: 2%;
+            font-size: 20px;
+            color: #C70039;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #FFC300;
+            color: #581845;
+        }
+
+        .detail-attr-size {
+            margin-left: 28%;
+        }
+
+        .container {
+            font-size: 20px;
+            color: #C70039;
+            margin-left: 32px;
+            width: 100%;
+            height: auto;
+        }
+
+        .table {
+            background-color: inherit;
+            /* color: whitesmoke; */
+            color: #900C3F;
+            font-size: 18px;
+            width: 700px;
+            margin: 23px;
+            height: auto;
+            border: black;
+        }
+
+        .container img {
+            padding-right: 32px;
+        }
+
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+
+        .cart {
+            padding-left: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid>article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid>article img {
+            max-width: 100%;
+            height: 355px;
+        }
+
+        .grid .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid .text a {
+            text-decoration: none;
+        }
+
+        .grid .text h2 {
+            font-size: 1.4rem;
+            font-family: 'Fredoka One', cursive;
+            color: whitesmoke;
+
+        }
+
+        .grid .text h4 a {
+            text-decoration: none;
+        }
+
+        .grid .text p {
+            font-size: 0.9rem;
+            color: rgb(119, 111, 111);
+        }
+
+        .grid .text p a {
+            text-decoration: none;
+            font-weight: bold;
+            /* color: #555; */
+            color: blanchedalmond;
+            font-family: 'Courgette', cursive;
+        }
+
+        .breadcrumb {
+            padding-left: 38px;
+        }
+
+        .pagination {
+            left: 50%;
+        }
+
+        .fcontainer {
+            max-width: 1200px;
+            position: relative;
+            width: 100%;
+            background-color: #FFC300;
+        }
+
+        .fcontainer {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-color-info" href="#">Nam Nattumarundhu kadai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <button class="btn btn-seconadary btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login</button>
+                    <button class="btn btn-secondary " btn bg-transparent"" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+                <p>
+                    E-mail: namnattumarundhukadai@gmail.com<br>
+                    Ph: 31245679807<br>
+                    Customer Care No: 1800-6578-9887
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/herbalproducts.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Herbal Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/herbalproducts.html">Herbal
+                                        Powders</a></li>
+                                <li><a class="dropdown-item" href="/rawordriedherbs.html">Raw/Dried
+                                        Herbs</a></li>
+                                <li><a class="dropdown-item" href="/beautyproducts.html">Beauty
+                                        Products</a></li>
+                                <li><a class="dropdown-item" href="/pisinorgum.html">Pisin/Gum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Medicines
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="/chooranam.html">Chooranam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/syrup.html">Syrup</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/lehiyam.html">Lehiyam/Rasayanam</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/thailam.html">Thailam/Oil</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pujapackages.html">Puja Packages</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/others.html">Others</a>
+                        </li>
+
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/books.html">Books </a>
+                        </li>
+                        <li class="cart">
+                            <a href="#"><img
+                                    src="https://img.icons8.com/emoji/48/000000/shopping-cart-emoji.png"></a>
+                            <!-- <!-- <i class="fa" style="font-size: 43px;">&#xf07a;</i> -->
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- breadcrumb divider starts here -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="/pujapackages.html">Puja Packages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chandi Homam</li>
+        </ol>
+    </nav>
+    <!-- Pagination starts here
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+
+    <!-- Login Modal starts here-->
+    <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal ends here -->
+
+
+    <!-- Signup Modal starts here-->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby=signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create a new account!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+    <br><br><br>
+    <div class="container">
+        <img src="/Images/chandihomam-productcard.jpg" width="355" height="355" align="left">
+        Chandi Homam<br><br>
+        Rs.6,800/-<br><br>
+        Quick Overview:<br>
+        Chandi Homam is dedicated to Lord Durga Devi. Deity durga Devi gives continous blessing during this Homam.
+        She is the primitive energy that is responsible for the making and abolition of this entire universe.<br>
+        Weight: Pack
+        <div class="detail-attr-size">
+            <label>Quantity: </label>
+            <select style="padding:10px 15px;border:2px solid #ddd;" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <br>
+        <a href="/cart.html" class="btn btn-primary btn-block">Add to cart</a>
+        <h3>Package contains:</h3>
+    </div>
+
+    <table class="table table-bordered my-4">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Tamil Name</th>
+                <th scope="col">English Name</th>
+                <th scope="col">Quantity</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>திரிநூல் </td>
+                <td>
+                    Tirinul
+                </td>
+                <td>
+                    2 nos
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>கதம்பம் பொடி</td>
+                <td>Mixture Powder
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>கலச நூல் </td>
+                <td>
+                    Kalasa Nool
+                </td>
+                <td>
+                    1 No
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>பழுப்பு சர்க்கரை</td>
+                <td>
+                    Brown sugar
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>கற்கண்டு</td>
+                <td>Sugar candy
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>நூல் உருண்டை</td>
+                <td>Ball of Yarn
+                </td>
+                <td>
+                    1 no
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>வெட்டிவேர்</td>
+                <td>
+                    Citronella
+                </td>
+                <td>
+                    1 Packet</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>தீப்பெட்டி</td>
+                <td>Match box
+                </td>
+                <td>
+                    1 box
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>அவில் </td>
+                <td>
+                    Rice flake
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>நாட்டு சர்க்கரை</td>
+                <td>
+                    Domestic sugar</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">12</th>
+                <td>குங்குமம்</td>
+                <td>
+                    Kumkum
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">14</th>
+                <td>அகர்பதி</td>
+                <td>
+                    Incenses Stick
+                </td>
+                <td>
+                    1 Packet
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">15</th>
+                <td>சந்தனம்</td>
+                <td>
+                    SandalWood Powder</td>
+                <td>r
+
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">16</th>
+                <td>சாம்பராணி</td>
+                <td>Incenses Powder
+                </td>
+                <td>
+                    1 Packet
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">17</th>
+                <td>பன்னீர்</td>
+                <td>
+                    Rose Water
+                </td>
+                <td>
+                    200ml
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">18</th>
+                <td>உடைத்த கடலை</td>
+                <td>
+                    Broken nuts</td>
+                <td>
+                    100 g</td>
+            </tr>
+            <tr>
+                <th scope="row">19</th>
+                <td>வெல்லம்</td>
+                <td>Jaggery
+                </td>
+                <td>
+                    250g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">20</th>
+                <td>மஞ்சள் பொடி</td>
+                <td>Turmeric Powder
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">21</th>
+                <td>சீயக்காய் தூள்</td>
+                <td>
+                    Soapnut powder
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">22</th>
+                <td>கஜூர்காய்</td>
+                <td>
+                    Kajurkay
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">23</th>
+                <td>நெல் பொறி</td>
+                <td>
+                    Paddy
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">24</th>
+                <td>படிகாரம் </td>
+                <td>
+                    Padigaram
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">25</th>
+                <td>அபிஷேக சல்லடை </td>
+                <td>
+                    abishega jalladai
+                </td>
+                <td>
+                    1 No
+
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <th scope="row">26</th>
+                <td>முகம் பார்க்கும் கண்ணாடி </td>
+                <td>Mirror
+                </td>
+                <td>
+                    1 No
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">27</th>
+                <td>விபூதி</td>
+                <td>
+                    Ash
+                </td>
+                <td>
+                    125g</td>
+            </tr>
+            <tr>
+                <th scope="row">28</th>
+                <td>தசாங்கம்</td>
+                <td>
+                    Thasangam
+                </td>
+                <td>
+                    50g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">29</th>
+                <td>பச்சரிசி மாவு</td>
+                <td>
+                    Rice flour
+                </td>
+                <td>
+                    500 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">30</th>
+                <td>வெரட்டி </td>
+                <td>Veratti</td>
+                <td>
+                    5</td>
+            </tr>
+            <tr>
+                <th scope="row">31</th>
+                <td>கோமியம் </td>
+                <td>
+                    cow urine
+                </td>
+                <td>
+                    100ml
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">32</th>
+                <td>மஞ்சள் கொம்பு </td>
+                <td>Dry Turmeric Root
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">33</th>
+                <td>பேரிச்சம்பழம் </td>
+                <td>
+                    Dates</td>
+                <td>
+                    200g</td>
+            </tr>
+            <tr>
+                <th scope="row">34</th>
+                <td>நெல்</td>
+                <td>Paddy
+                </td>
+                <td>1 kg
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">35</th>
+                <td>சமத்து</td>
+                <td>
+                    Samathu
+                </td>
+                <td>
+                    1 bunch
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">36</th>
+                <td>தொன்னை</td>
+                <td>
+                    Dry Leaves Cup</td>
+                <td>
+                    1 bunch</td>
+            </tr>
+            <tr>
+                <th scope="row">37</th>
+                <td>தேன்</td>
+                <td>Honey
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">38</th>
+                <td>வெட்டிவேர்</td>
+                <td>Citronella
+                </td>
+                <td>
+                    50g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">39</th>
+                <td>வெள்ளை கடுகு</td>
+                <td>
+                    White Mustard
+                </td>
+                <td>100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">40</th>
+                <td>பச்சரிசி</td>
+                <td>
+                    Raw Rice
+                </td>
+                <td>
+                    1 kg
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">41</th>
+                <td>சிகப்பு செந்துரம் </td>
+                <td>Fair Senthuram
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">42</th>
+                <td>நல்லெண்ணெய்</td>
+                <td>
+                    Sesame oil
+                </td>
+                <td>500 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">43</th>
+                <td>பாக்கு</td>
+                <td>Betel Nuts
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">44</th>
+                <td>கடலை எண்ணை</td>
+                <td>
+                    Groundnut oil
+                </td>
+                <td>500 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">45</th>
+                <td>கம்பளி கியரு</td>
+                <td>
+                    Woolen Thread
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">46</th>
+                <td>கோதுமை, நெல், துவரை ,உளுந்து கொள்ளு, எள், பச்சை பயிறு, பச்சை பட்டாணி .அவறை
+                </td>
+                <td>Wheat Paddy, Pigeonpea, Black Gram, Horse Gram, Sesame, green gram, Green Peas, Bean
+                </td>
+                <td>100 g each</td>
+            </tr>
+            <tr>
+                <th scope="row">47</th>
+                <td>முந்திரி</td>
+                <td>
+                    Cashew Nuts
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">48</th>
+                <td>இலவங்க பட்டை</td>
+                <td>
+                    Cinnamon
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">49</th>
+                <td>வால்மிளகு</td>
+                <td>
+                    Cubeb
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">50</th>
+                <td>9 நிறம் ரவிக்கை</td>
+                <td>
+                    9 colour blouse
+                </td>
+                <td>
+                    1 Set
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">51</th>
+                <td>சொம்பு</td>
+                <td>Copper Vessel
+                </td>
+                <td>
+                    9 nos
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">52</th>
+                <td>ஜாதிக்காய்</td>
+                <td>
+                    Nutmeg
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">53</th>
+                <td>ஏலக்காய்</td>
+                <td>Cardamom
+                </td>
+                <td>
+                    100 g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">54</th>
+                <td>பச்சைக் கற்பூரம்</td>
+                <td>Menthol Camphor
+                </td>
+                <td>100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">55</th>
+                <td>அஷ்டபந்தன மொக்கு</td>
+                <td>
+                    Ashta Pandana Bud
+                </td>
+                <td>
+                    1 kg
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">56</th>
+                <td>108 ஓம திரவியம் </td>
+                <td>108 Herbs
+                </td>
+                <td>
+                    each 50g
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">57</th>
+                <td>நவகிரக சமித்து</td>
+                <td>
+                    Nava Samiththu
+                </td>
+                <td> 1 bunch
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">58</th>
+                <td>நெய்</td>
+                <td>Ghee
+                </td>
+                <td>
+                    500 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">59</th>
+                <td>முருக்கன் இலை</td>
+                <td>Murukkan leaf
+                </td>
+                <td>
+                    1 bunch
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">60</th>
+                <td>ஜாபத்ரி</td>
+                <td>Japatri
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">61</th>
+                <td>தாமரை மொக்கு (வெள்ளை தாமரை)</td>
+                <td>White Lotus Bud
+                </td>
+                <td>
+                    100 g
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">62</th>
+                <td>பட்டுதுணி </td>
+                <td>Silk Cloth
+                </td>
+                <td>1 No
+
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">63</th>
+                <td>அபிஷேக சல்லடை </td>
+                <td>Abishega jalladai
+                </td>
+                <td>
+                    1 No
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="description">
+        Chandi Homam:
+        <br>
+        <br>
+        Chandi Homam is dedicated to Lord Durga Devi. Deity durga Devi gives continous blessing during this Homam.
+        She is the primitive energy that is responsible for the making and abolition of this entire universe. She is
+        the total energies of this whole universe.
+        <br>
+        <br>
+
+        A Chandi Homam is the great and one of the most powerful homam for a person getting Success in their life
+        and also it’s overcome of all kinds of Doshas and barriers in one’s whole life. This homam helps a person to
+        get success over Enemies and in the Court Cases. By performing the Maha Chandi Homa, one can become free
+        from evil eyes, troubles, barriers and they are also bestowed with getting good health, wealth, chestity and
+        prosperity.
+
+
+        <br>
+        <br>
+        Chandi yagna is the most powerful yagna in Hindu religion. It is done across India during different
+        festival, especially during navaratri festival. Chandi Homa is celebrated by enumerating verses from the
+        Durga Sapthasathi and giving oblations into the sacrificial fire. By performing chandi yagna once in a year
+        gives success in life and also offers positive strength to face all hurdles in their life. This yagna gives
+        strength to win over enemies and overcomes all the obstacles in life.
+
+        <br>
+        <br>
+
+        On devoting Lord Chandi gives feminine energy to the worshipper to achieve success in their life. Goddess
+        Chandi is the personification of all the celestial forces and she is the Mother of the entire Universe. She
+        is the preserver of her children on the earth and save them from all the evil effect.
+
+        <br>
+        <br>
+
+        There are 700 secret and effortful mantras are present to praise of lord Durga in which she defeats various
+        demands for her worshipper. In Chandi Homam, Lord Durga is treated as a 2-10 year old Kanyakaa (girl). So,
+        while performing this Homa, girl children of these ages are devoted and offered dress and other precious
+        gifts.
+
+        <br>
+        <br>
+
+        By performing chandi Homam for five times we can overcomes the evil planetary troubles. On performing this
+        homa for seven time frightens and life threads are removed, for performing chandi yagna for eleven times it
+        gives royalty and wealthy life, By performing this homam for sixteen time it offers success in life.
+
+
+        <br>
+        <br>
+        <br>
+        Procedure involved for chandi homam:
+        <br>
+
+        Chandi Homam is not an ordinary Homam; it has to be performed by expert priests. The expert priests will
+        perform the Chandi Homa by chanting the mantras from Durga Saptashati. It is then followed by performing the
+        actual Homam with other rituals which includes: Ganapathi pooja, kanya pooja, Anugna
+        sankalpam,punyahavachanam, kalasa sathaapna, saptashati parayanam and etc. Before performing any yagna
+        ganapathi pooja is performed first. It is believed that Lord ganesha removes all struggles in their life.
+        <br>
+        Benefits:
+        <ul>
+            <li>To overcome obstacles and win over the enemies</li>
+            <li>For fulfilling all desires.</li>
+            <li>To overcome all sufferings.</li>
+            <li>It gives strength removing all dangers.</li>
+            <li>It is useful for getting success.
+            </li>
+            <li>It give relief from all kinds of dhosha.</li>
+            <li>It minimizes planetary influence.</li>
+
+        </ul>
+        <br>
+        Performing chandi homam removes all obstacles, troubles and planetary influence. So it gives strength, all
+        miseries, and all desires in life happy life.
+
+
+    </div>
+    <!-- footer begins here -->
+    <div class="fcontainer">
+        <div class="newsletter-box bg-image newsletter-box3 radius6">
+
+        </div>
+        <!-- End Newsletter -->
+        <div class="list-footer-box">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 colxs-12">
+                    <div class="footer-box">
+                        <h2 class="title18 title-underline"><span>Contact Us</span></h2>
+                        <p class="desc contact-info-footer">Alternate Medicine store has ventured into online commerce
+                            with an
+                            aspiration to revive our wild crops (Herbs) of our soil. It is a noble attempt to take our
+                            pure and
+                            precious indigenous herbs delivered to your doorstep at ease.
+                            &nbsp;&nbsp;<a href="" style="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End List Footer Box -->
+        <div class="social-payment">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="payment-method text-left" style="margin-top:10px;">
+                        <a href="#" class="wobble-top"><img src="/Images/cirruspayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/mastercardpayment.png" alt=""></a>
+                        <a href="#" class="wobble-top"><img src="/Images/visapayment.png" alt=""></a>
+                        <!--<a href="#" class="wobble-top"><img src="images/icons/payment4.png" alt=""></a>-->
+                        <a href="#" class="wobble-top"><img src="/Images/americanexpresspayment.png" alt=""></a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="social-footer text-right">
+                        <p class="address_p">
+                            <b>www.nmkonline.com</b><br>
+                            <b>Nam Nattu Marundhu Kadai</b><br>
+                            No 735, abc Junction,<br>
+                            Klphn Road, Coimbatore,<br>
+                            Tamilnadu, India - 641014.<br>
+                            Ph.no: 31245679807<br>
+                            e-mail id: namnattumarundhukadai@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Social Payment -->
+        <div class="copyright-design">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p class="desc text-left copyright">Copyright 2021 <a href="/index.html" style="color:#581845;">Nam
+                            Nattu Marundhu Kadai.</a> All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
